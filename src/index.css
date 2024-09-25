@@ -1,13 +1,223 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Ubuntu:wght@400;700&display=swap');
+
+/* Primary Font: Ubuntu, Secondary Font: Open Sans */
 body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #F9FAFA;
+  color: #3C3C3C;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Dark Mode */
+.app.dark-mode {
+  background-color: #3C3C3C;
+  color: white;
 }
+
+/* Headers Styling */
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  color: #9785BA;
+}
+
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
+  color: #AF9FCD;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  color: #3C3C3C;
+}
+
+/* General Layout */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: #9785BA;
+  color: #FFFFFF;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  background: #F9FAFA;
+}
+
+.chatbox {
+  flex: 2;
+  margin-right: 2em;
+  border: 1px solid #AF9FCD;
+  border-radius: 5px;
+  background: #FFFFFF;
+  padding: 1.5em;
+}
+
+/* Input Section for chat messages */
+.input-section input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #AF9FCD;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.input-section button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #AF9FCD;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Conversation List Styling */
+.conversation-list {
+  flex: 1;
+  background: #D7C7F4;
+  padding: 1em;
+  border: 1px solid #AF9FCD;
+  border-radius: 5px;
+}
+
+.conversation-list .conversation {
+  margin-bottom: 1.5em;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 1px solid #AF9FCD;
+  border-radius: 4px;
+}
+
+/* Messages */
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #F9FAFA;
+  border-radius: 5px;
+  border: 1px solid #AF9FCD;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.message .feedback {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* Thumbs Up / Down Feedback */
+.feedback span {
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+/* Feedback Form */
+.feedback-form {
+  margin-top: 2em;
+  padding: 1em;
+  background: #D7C7F4;
+  border-radius: 5px;
+  border: 1px solid #AF9FCD;
+}
+
+.feedback-form h3 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.8rem;
+}
+
+.feedback-form .star {
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.feedback-form .star.selected {
+  color: gold;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid #AF9FCD;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.feedback-form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #9785BA;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
+  border-radius: 4px;
+}
+
+/* Feedback Table */
+.feedback-table {
+  flex: 1;
+  background: #D7C7F4;
+  padding: 1em;
+  border-radius: 5px;
+  border: 1px solid #AF9FCD;
+}
+
+.feedback-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.feedback-table table th,
+.feedback-table table td {
+  padding: 10px;
+  border: 1px solid #AF9FCD;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.feedback-table table th {
+  background-color: #AF9FCD;
+  color: white;
+}
+
+.feedback-table select {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #AF9FCD;
+  border-radius: 4px;
+}
+
+/* Button */
+button {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px 15px;
+  background: #9785BA;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Star Rating Style */
+.feedback-form .star {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.feedback-form .star.selected {
+  color: gold;
+}
+

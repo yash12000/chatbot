@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import ChatWindow from './components/ChatWindow';
+import FeedbackPanel from './components/FeedbackPanel';
+import FeedbackSummary from './components/FeedbackSummary';
+import Header from './components/Header';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // React Router Dom fixed import
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Router>
+        <Header />
+        <div className="app-body">
+          <Routes>
+            <Route path="/" element={<ChatWindow />} />
+            <Route path="/feedback" element={<FeedbackPanel />} />
+            <Route path="/summary" element={<FeedbackSummary />} />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
